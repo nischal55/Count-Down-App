@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count-down</title>
+</head>
+<style>
+    .main-box{
+        width: 130px;
+        height: 130px;
+        border: red solid 2px;
+        border-radius: 80px;
+        margin: 0 auto;
+        margin-top: 8rem;
+    }
+    #demo{
+        margin-left: 40%;
+        margin-top: 30%;
+        font-size: 24px;
+    }
+    button{
+       
+        background-color: rgb(73, 226, 73);
+        border: none;
+        font-size: 20px;
+        color: aliceblue;
+        padding: 5px;
+        font-family: 'Open sans',sans-serif;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .inner{
+       width: 28%;
+       margin-top: 5%;
+       margin-left: 43%;
+    }
+    h1{
+        margin-left: 40%;
+        font-family: 'Opens sans',sans-serif;
+        margin-top: 2rem;
+    }
+   
+</style>
+<body>
+    <h1>COUNT-DOWN APP</h1>
+    <div class="main-box">
+        <p id="demo"></p>
+        <br><br><br><br><br><br>
+        
+    </div>
+    <div class="inner">
+        <input type="text" id="time">
+        <button onclick="takeValue()"><b>Click</b> </button>
+        
+    </div>
+
+    <script>
+        function takeValue(){
+            var a = document.getElementById("time").value;
+            var b = parseInt(a);
+            b=b+1;
+            var c= b*10;
+            
+            var d=setInterval(function(){
+                b--;
+              if(b>=0){
+                document.getElementById('demo').innerHTML=b;
+                
+                }else{
+                    clearInterval(d);
+                    alert("Count Down is Over");
+                
+                }
+            },1000);
+            
+
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
