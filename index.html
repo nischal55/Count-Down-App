@@ -32,24 +32,28 @@
         cursor: pointer;
     }
     .inner{
-       width: 28%;
+       width:38%;
+       margin: 0 auto;
        margin-top: 5%;
-       margin-left: 43%;
     }
     h1{
-        margin-left: 40%;
+        
         font-family: 'Opens sans',sans-serif;
         margin-top: 2rem;
+        margin: 0 auto;
     }
    
 </style>
 <body>
+   <center>
     <h1>COUNT-DOWN APP</h1>
+</center>
     <div class="main-box">
         <p id="demo"></p>
         <br><br><br><br><br><br>
         
     </div>
+    <center>
     <div class="inner">
         <input type="text" id="time">
         <button onclick="takeValue()"><b>Click</b> </button>
@@ -61,7 +65,7 @@
             var a = document.getElementById("time").value;
             var b = parseInt(a);
             b=b+1;
-            var c= b*10;
+            
             
             var d=setInterval(function(){
                 b--;
@@ -81,6 +85,6 @@
         
 
     </script>
-
+</center>
 </body>
 </html>
